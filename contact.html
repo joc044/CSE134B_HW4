@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jou-Chih Chang's Contact</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+      .social-icons img {
+        width: 25px;
+        height: 25px;
+      }
+      
+      .profile-image img {
+        width: 250px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Contact</h1>
+      <nav>
+        <div class="nav-links">
+          <a href="home.html">Home</a> | <a href="about.html">About</a> |
+          <a href="projects.html">Projects</a> |
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+
+      <search>
+        <form role="search">
+          <input id="query" name="query" type="search" placeholder="Search my site...">
+          <button type="submit">Go!</button>
+        </form>
+      </search>
+    </header>
+
+    <main class="contact-container">
+      <div class="video">
+        <video autoplay playsinline width="600">
+          <source src="assets/sunset.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <section class="contact-info">
+        <h2>Personal Information</h2>
+        <address>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+19516661557">951-666-1557</a>
+          </p>
+          <p>
+            <strong>School Email:</strong
+            ><a href="mailto:joc044@ucsd.edu"> joc044@ucsd.edu</a>
+          </p>
+          <p>
+            <strong>Personal Email:</strong
+            ><a href="mailto:irisis1123@gmail.com"> irisis1123@gmail.com</a>
+          </p>
+        </address>
+      </section>
+
+      <div class="contact-form">
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>Visitor Information</legend>
+
+            <label for="first-name">First Name*</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name*</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="countryCode">Country Code</label>
+            <input
+              list="countryCodes"
+              id="countryCode"
+              name="countryCode"
+              placeholder="+1"
+              pattern="\+?[0-9]+">
+            <datalist id="countryCodes">
+              <option value="+1">United States/Canada</option>
+              <option value="+886">Taiwan</option>
+              <option value="+44">United Kingdom</option>
+              <option value="+91">India</option>
+              <option value="+33">France</option>
+              <option value="+49">Germany</option>
+              <option value="+81">Japan</option>
+              <option value="+61">Australia</option>
+              <option value="+55">Brazil</option>
+              <option value="+86">China</option>
+              <option value="+971">United Arab Emirates</option>
+            </datalist>
+
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="1234567890"
+              pattern="[0-9\s\-]+">
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+          </fieldset>
+
+          <label for="inquiry">Inquiry Type:</label>
+          <select id="inquiry" name="inquiry">
+            <optgroup label="General">
+              <option value="question">General Question</option>
+              <option value="feedback">Feedback</option>
+            </optgroup>
+            <optgroup label="Work">
+              <option value="job">Job Opportunity</option>
+              <option value="collab">Collaboration</option>
+            </optgroup>
+          </select>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <hr>
+
+    <footer>
+      <p class="handle">@socialmediaplatform</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/iiiiiirrrrrriiiiiissssss/">
+          <img src="assets/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/jou-chih-chang-185962296/">
+          <img src="assets/linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+      <p>&copy; <del>2024</del> <ins>2025</ins> By Jou-Chih Chang</p>
+      <noscript>
+        <p>JavaScript is disabled. Some features may not work correctly.</p>
+      </noscript>
+    </footer>
+  </body>
+</html>

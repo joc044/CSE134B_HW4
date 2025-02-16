@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jou-Chih Chang's Profile</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+      .social-icons img {
+        width: 25px;
+        height: 25px;
+      }
+      
+      .profile-image img {
+        width: 250px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <hgroup>
+        <h1>
+          Welcome to
+          <span style="color: blue;">My Profile!</span>
+        </h1>
+        <p>Software Development Engineer</p>
+      </hgroup>
+
+      <nav>
+        <div class="nav-links">
+          <a href="home.html">Home</a> | <a href="about.html">About</a> |
+          <a href="projects.html">Projects</a> |
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+
+      <search>
+        <form role="search">
+          <input id="query" name="query" type="search" placeholder="Search my site...">
+          <button type="submit">Go!</button>
+        </form>
+      </search>
+    </header>
+
+    <main class="profile-container">
+      <div class="profile-info">
+        <table>
+          <tr>
+            <td>
+              <div class="profile-image">
+                <picture>
+                  <source
+                    srcset="assets/profile2.jpg"
+                    media="(min-width: 768px)">
+                  <img src="assets/profile1.jpg" alt="Jou-Chih Chang">
+                </picture>
+              </div>
+            </td>
+
+            <td>
+              <aside>
+                <h2>Jou-Chih Chang</h2>
+                <p>
+                  I am a <i>dedicated</i> <abbr title="software development engineer">SDE</abbr> located in San Diego.
+                </p>
+                <p>
+                  My favorite quotations:
+                </p>
+                  <ol>
+                    <li>
+                      <blockquote cite="https://www.goodreads.com/book/show/13335037-divergent">
+                        "Fear doesn't shut you down; it wakes you up."
+                      </blockquote>
+                      <cite>— Veronica Roth, <em>Divergent</em></cite>
+                    </li>
+                    <li> 
+                      <blockquote cite="https://quotestoinspire.medium.com/the-best-preparation-for-tomorrow-is-h-jackson-brown-jr-54a60ca889a4">
+                        "The best preparation for tomorrow is doing your best today."
+                      </blockquote>
+                      <cite>— H. Jackson Brown Jr.</cite>
+                    </li>
+                  </ol>
+              </aside>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <p class="handle">@socialmediaplatform</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/iiiiiirrrrrriiiiiissssss/">
+          <img src="assets/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/jou-chih-chang-185962296/">
+          <img src="assets/linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+      <audio autoplay>
+        <source src="assets/audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <p>&copy; <del>2024</del> <ins>2025</ins> By Jou-Chih Chang</p>
+      <noscript>
+        <p>JavaScript is disabled. Some features may not work correctly.</p>
+      </noscript>
+    </footer>
+  </body>
+</html>
