@@ -5,36 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jou-Chih Chang's Projects</title>
     <link rel="stylesheet" href="assets/style.css">
-    <style>
-        .social-icons img {
-          width: 25px;
-          height: 25px;
-        }
-        
-        .profile-image img {
-          width: 250px;
-        }
-      </style>
   </head>
 
   <body>
     <header>
-      <h1>Projects</h1>
+      <div class="header-title">
+        <h1>Projects</h1>
+      </div>
 
       <nav>
         <div class="nav-links">
-          <a href="home.html">Home</a> | <a href="about.html">About</a> |
-          <a href="projects.html">Projects</a> |
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
           <a href="contact.html">Contact</a>
         </div>
       </nav>
 
-      <search>
+      <div class="search-box">
         <form role="search">
           <input id="query" name="query" type="search" placeholder="Search my site...">
           <button type="submit">Go!</button>
         </form>
-      </search>
+      </div>
     </header>
 
     <main>
@@ -83,44 +76,53 @@
       </button>
 
       <h2>Drawing</h2>
-      <canvas id="Canvas">
-        Your browser does not support the canvas tag.
-      </canvas>
-        
-      <script>
-        let canvas = document.getElementById("Canvas");
-        let ctx = canvas.getContext("2d");
-        ctx.fillStyle = "#FF5";
-        ctx.fillRect(0, 0, 200, 200);
-      </script>
+      <div class="drawing-area">
+        <canvas id="Canvas">
+          Your browser does not support the canvas tag.
+        </canvas>
 
-      <svg>
-        <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="1" fill="red"/>
-      </svg>
+        <script>
+          let canvas = document.getElementById("Canvas");
+          let ctx = canvas.getContext("2d");
+          ctx.fillStyle = "#FF5";
+          ctx.fillRect(0, 0, 200, 200);
+        </script>
 
-      <button onclick="showContent()">Draw</button>
-
-      <template id="draw">
-        <svg width="300" height="200">
-            <polygon points="100,10 40,198 190,78 10,78 160,198"
-            style="fill:yellow;"/>
+        <svg>
+          <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="1" fill="red"/>
         </svg>
-      </template>
 
-      <div id="drawingarea"></div>
+        <template id="draw">
+          <svg width="300" height="200">
+              <polygon points="100,10 40,198 190,78 10,78 160,198"
+              style="fill:yellow;"/>
+          </svg>
+        </template>
+      </div>
+      <div class="drawing-button">
+        <button onclick="showContent()">Draw</button>
+      </div>
     </main>
 
     <footer>
-      <p class="handle">@socialmediaplatform</p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/iiiiiirrrrrriiiiiissssss/">
-          <img src="assets/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.linkedin.com/in/jou-chih-chang-185962296/">
-          <img src="assets/linkedin.png" alt="LinkedIn">
-        </a>
+      <div class="socials">
+        <p class="footer-text">@socialmediaplatform</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/iiiiiirrrrrriiiiiissssss/">
+            <picture>
+              <source srcset="assets/instagram.webp" type="image/webp" width="30" height="30" loading="lazy">
+              <img src="assets/instagram.png" alt="Instagram logo linking to Jou-Chih Chang's profile" width="30" height="30" loading="lazy">
+            </picture>
+          </a>
+          <a href="https://www.linkedin.com/in/jou-chih-chang-185962296/">
+            <picture>
+              <source srcset="assets/linkedin.webp" type="image/webp" width="30" height="30" loading="lazy">
+              <img src="assets/linkedin.png" alt="LinkedIn logo linking to Jou-Chih Chang's profile" width="30" height="30" loading="lazy">
+            </picture>
+          </a>
+        </div>
       </div>
-      <p>&copy; <del>2024</del> <ins>2025</ins> By Jou-Chih Chang</p>
+      <p class="copyright">&copy; <del>2024</del> <ins>2025</ins> By Jou-Chih Chang</p>
       <noscript>
         <p>JavaScript is disabled. Some features may not work correctly.</p>
       </noscript>

@@ -5,40 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jou-Chih Chang's Contact</title>
     <link rel="stylesheet" href="assets/style.css">
-    <style>
-      .social-icons img {
-        width: 25px;
-        height: 25px;
-      }
-      
-      .profile-image img {
-        width: 250px;
-      }
-    </style>
   </head>
 
   <body>
     <header>
-      <h1>Contact</h1>
+      <div class="header-title">
+        <h1>Contact Information</h1>
+      </div>
+
       <nav>
         <div class="nav-links">
-          <a href="home.html">Home</a> | <a href="about.html">About</a> |
-          <a href="projects.html">Projects</a> |
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
           <a href="contact.html">Contact</a>
         </div>
       </nav>
 
-      <search>
+      <div class="search-box">
         <form role="search">
           <input id="query" name="query" type="search" placeholder="Search my site...">
           <button type="submit">Go!</button>
         </form>
-      </search>
+      </div>
     </header>
 
     <main class="contact-container">
       <div class="video">
-        <video autoplay playsinline width="600">
+        <video controls playsinline width="600">
           <source src="assets/sunset.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -67,10 +61,10 @@
             <legend>Visitor Information</legend>
 
             <label for="first-name">First Name*</label>
-            <input type="text" id="first-name" name="first-name" required>
+            <input type="text" id="first-name" name="first-name" required pattern="[A-Za-z]+" title="Only letters allowed (A-Z, a-z)">
 
             <label for="last-name">Last Name*</label>
-            <input type="text" id="last-name" name="last-name" required>
+            <input type="text" id="last-name" name="last-name" required pattern="[A-Za-z]+" title="Only letters allowed (A-Z, a-z)">
 
             <label for="countryCode">Country Code</label>
             <input
@@ -78,7 +72,8 @@
               id="countryCode"
               name="countryCode"
               placeholder="+1"
-              pattern="\+?[0-9]+">
+              pattern="\+?[0-9]+"
+              title="Enter a valid country code (e.g., +1)">
             <datalist id="countryCodes">
               <option value="+1">United States/Canada</option>
               <option value="+886">Taiwan</option>
@@ -98,8 +93,9 @@
               type="tel"
               id="phoneNumber"
               name="phoneNumber"
-              placeholder="1234567890"
-              pattern="[0-9\s\-]+">
+              placeholder="123-456-7890"
+              pattern="\d{3}[-.\s]?\d{3}[-.\s]?\d{4}" 
+              title="Enter a valid phone number (e.g., 123-456-7890)">
 
             <label for="email">Email*</label>
             <input type="email" id="email" name="email" required>
@@ -117,13 +113,15 @@
             </optgroup>
           </select>
 
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject">
+          <label for="subject">Subject*</label>
+          <input type="text" id="subject" name="subject" required>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
 
-          <button type="submit">Submit</button>
+          <div class="button-container">
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
     </main>
@@ -131,16 +129,24 @@
     <hr>
 
     <footer>
-      <p class="handle">@socialmediaplatform</p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/iiiiiirrrrrriiiiiissssss/">
-          <img src="assets/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.linkedin.com/in/jou-chih-chang-185962296/">
-          <img src="assets/linkedin.png" alt="LinkedIn">
-        </a>
+      <div class="socials">
+        <p class="footer-text">@socialmediaplatform</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/iiiiiirrrrrriiiiiissssss/">
+            <picture>
+              <source srcset="assets/instagram.webp" type="image/webp" width="30" height="30" loading="lazy">
+              <img src="assets/instagram.png" alt="Instagram logo linking to Jou-Chih Chang's profile" width="30" height="30" loading="lazy">
+            </picture>
+          </a>
+          <a href="https://www.linkedin.com/in/jou-chih-chang-185962296/">
+            <picture>
+              <source srcset="assets/linkedin.webp" type="image/webp" width="30" height="30" loading="lazy">
+              <img src="assets/linkedin.png" alt="LinkedIn logo linking to Jou-Chih Chang's profile" width="30" height="30" loading="lazy">
+            </picture>
+          </a>
+        </div>
       </div>
-      <p>&copy; <del>2024</del> <ins>2025</ins> By Jou-Chih Chang</p>
+      <p class="copyright">&copy; <del>2024</del> <ins>2025</ins> By Jou-Chih Chang</p>
       <noscript>
         <p>JavaScript is disabled. Some features may not work correctly.</p>
       </noscript>
