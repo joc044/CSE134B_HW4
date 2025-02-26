@@ -149,6 +149,8 @@ th, td {
 }
 
 .contact-form {
+    display: flex;
+    flex-direction: column;
     background: #dcdcdc;
     background: color-mix(in srgb, #acb8b7 60%, white 40%);
     padding: 2rem;
