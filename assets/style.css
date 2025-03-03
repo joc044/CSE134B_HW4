@@ -8,6 +8,11 @@
     --font-size-base: 1rem;
 }
 
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -23,6 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 img {
@@ -267,6 +273,46 @@ footer {
 
 .personal-img img:hover {
     transform: scale(1.05);
+}
+
+input:valid,
+textarea:valid {
+  border-color: green;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+input:placeholder-shown {
+  border-color: gray;
+}
+
+.errors {
+    color: red;
+    font-weight: bold;
+}
+
+.error-flash {
+    animation: flash 0.5s ease-in-out;
+}
+
+@keyframes flash {
+    0% { background-color: #ffcccc; }
+    100% { background-color: white; }
+}
+
+#theme-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    display: inline-block;
+    padding: 12px 24px;
+    color: black;
+    background-color: lightgray;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 @scope (.profile-container) {
